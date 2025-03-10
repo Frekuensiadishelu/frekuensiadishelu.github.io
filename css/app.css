@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+body {
+    background-color: #141414;
+    overflow-x: hidden;
+}
+
+nav {
+    transition: background-color 0.2s ease-in; 
+    background-color: #141414;
+}
+
+.font-julias-sans-one {
+    font-family: "Julius Sans One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ms-10 {
+    margin-left: 8%;
+}
+
+.me-10 {
+    margin-right: 8%;
+}
+
+.brownish-bg {
+    background-color: #744a3b;
+}
+.position-r {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.position-r .img {
+    width: 100%;
+    height: 100vh; /* 100% of the viewport height */
+    object-fit: cover; /* Ensures the image fills the container */
+    object-position: center;
+}
+
+.btn {
+    border-radius: 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.blueish-bg {
+    background-color: #30658B;
+}
+
+.white-grey-bg {
+    background-color: #F7F1F1;
+}
+.img {
+    width: 100%;
+    height: 100vh; /* Full height */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+
+/* Create a black overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Black overlay with some transparency */
+    z-index: 1;
+}
+
+.mid-position {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+}
+
+.mid-left h1 {
+    font-size: 60px; /* Default size for large screens */
+    line-height: 1.2;
+}
+
+.mid-left p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+.bg-custom {
+    background-color: #292929;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.date-container {
+    margin: 20px 0;
+}
+
+.month {
+    font-size: 3rem; /* Large month */
+    margin: 0;
+}
+
+.date {
+    font-size: 2rem; /* Medium date */
+    margin: 0;
+}
+
+.year {
+    font-size: 1rem; /* Smaller year */
+    color: #6c757d; /* Muted color */
+}
+
+.time {
+    margin-top: 10px;
+    color: #6c757d; /* Muted color */
+}
+
+.active-card {
+    animation: pop 1.5s infinite; /* Apply the popping animation infinitely */
+}
+
+
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Scale up for emphasis */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/** Responsive styles **/
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .mid-left h1 {
+        font-size: 40px;
+    }
+
+    .mid-left p {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 767px) {
+    .mid-left {
+        top: 30%; /* Adjust position for smaller screens */
+        left: 10px;
+    }
+
+    .mid-left h1 {
+        font-size: 28px; /* Smaller text size for mobile */
+        line-height: 1.3;
+    }
+
+    .mid-left p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .navbar-brand {
+        font-size: 1rem; /* Adjusted size for mobile */
+    }
+    .ms-10 {
+        margin-left: 2%;
+    }
+}
